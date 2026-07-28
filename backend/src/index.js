@@ -7,6 +7,7 @@ import User from "./models/user.model.js"
 import { connectDB } from "./lib/db.js"
 import dns from 'dns';
 import { clerkMiddleware } from "@clerk/express"
+import job from "./lib/cron.js";
 //forces dns for the node program to the same one node uses
 dns.setServers(['8.8.8.8', '8.8.4.4']);
 
