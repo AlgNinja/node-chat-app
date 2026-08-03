@@ -2,23 +2,23 @@ import mongoose from "mongoose"
 
 const messageSchema = new mongoose.Schema({
     senderId: {
-        typeof: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true
     },
     receiverId: {
-        typeof: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true
     },
     text: {
-        typeof: String,
+        type: String,
     },
     image: {
-        typeof: String,
+        type: String,
     },
     video: {
-        typeof: String,
+        type: String,
     }
 }, {timestamps:true})
 

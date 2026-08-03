@@ -10,6 +10,7 @@ import { clerkMiddleware } from "@clerk/express"
 import job from "./lib/cron.js";
 import clerkWebhook from "./webhooks/clerk.webhook.js"
 import authRoutes from "./routes/auth.route.js"
+import messageRoutes from "./routes/message.route.js"
 //forces dns for the node program to the same one node uses
 dns.setServers(['8.8.8.8', '8.8.4.4']);
 
@@ -31,6 +32,7 @@ app.get("/health", (req, res) => {
 })
 
 app.use("/api/auth", authRoutes)
+app.use("/api/messages", messageRoutes)
 
 //if public directory exists serve the static file
 if(fs.existsSync(publicDir)) {
