@@ -1,5 +1,6 @@
 import { WallpaperProvider } from "./context/WallpaperContext"
 import { ThemeProvider } from "./context/ThemeContext"
+import PageLoader from "./components/PageLoader"
 import { Navigate, Route, Routes } from "react-router"
 import ChatPage from "./pages/ChatPage"
 import AuthPage from "./pages/AuthPage"
@@ -9,7 +10,7 @@ function App() {
   const {isSignedIn, isLoaded } = useAuth()
 
   if(!isLoaded)
-    return <p>Loading...</p>
+    return <PageLoader/>
   return (
     <ThemeProvider>
       <WallpaperProvider>
