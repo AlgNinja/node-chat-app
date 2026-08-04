@@ -1,7 +1,10 @@
+import toast from "react-hot-toast"
 function ChatPage() {
   return (
-    <div>ChatPage</div>
+    <div>
+        chat page
+    </div>
   )
 }
 
-export default ChatPage
+export default ChatPage 
